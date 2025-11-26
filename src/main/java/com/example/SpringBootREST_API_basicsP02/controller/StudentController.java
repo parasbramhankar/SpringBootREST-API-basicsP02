@@ -63,7 +63,7 @@ public class StudentController {
         return ResponseEntity.ok(student);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void>deleteStudent(@PathVariable int id){
         Student student=studentDB.remove(id);
 
